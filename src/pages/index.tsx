@@ -3,14 +3,14 @@ import Navbar from '@/components/Navbar'
 import { auth } from "@/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 import React from 'react'
-import SendMessage from '@/components/SendMessage';
+import ChatBox from '@/components/ChatBox';
 
 const index = () => {
   const [user] = useAuthState(auth);
   return (
     <div>
       <Navbar/>
-      {!user? <Hero/>: <SendMessage/>}
+      {!user? <Hero/>: <ChatBox/>}
     </div>
   )
 }
