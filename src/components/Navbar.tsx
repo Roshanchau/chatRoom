@@ -15,7 +15,7 @@ const Navbar = () => {
       };
   return (
     <header>
-      <nav className="flex flex-row items-center justify-between p-9">
+      <nav className="flex flex-row items-center justify-between px-4 py-4">
         {/* logo */}
         <div className="text-neutral-100 text-4xl">Chat Room</div>
         {/* signin and signout buttons */}

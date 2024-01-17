@@ -6,6 +6,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 
 const SendMessage = () => {
     const [user] = useAuthState(auth);
+    const[loading , setLoading]=useState(true)
   const sendMessage = async (event:any) => {
     event.preventDefault();
     if (message.trim() === "") {
@@ -20,12 +21,13 @@ const SendMessage = () => {
       uid:user?.uid,
     });
     setMessage("");
+    setLoading(false)
   };
 
   const [message, setMessage] = useState("");
   return (
     <form action="submit" onSubmit={(event) => sendMessage(event)}>
-      <div className="flex flex-row gap-8 bg-slate-500 p-6">
+      <div className="flex flex-row gap-8 w-[800px] bg-slate-500 p-6 rounded-lg">
         <input
           type="text"
           value={message}
