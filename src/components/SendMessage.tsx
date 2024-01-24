@@ -27,7 +27,7 @@ const SendMessage = () => {
   const [message, setMessage] = useState("");
   return (
     <form action="submit" onSubmit={(event) => sendMessage(event)}>
-      <div className="flex flex-row gap-8 w-[800px] bg-slate-500 p-6 rounded-lg">
+      <div className="flex flex-row gap-8 w-[800px] bg-slate-700 p-6 rounded-lg">
         <input
           type="text"
           value={message}
